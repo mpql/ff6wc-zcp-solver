@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zozo Clock Puzzle Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zozo Clock Puzzle Solver</h1>
+        
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle">🌙 Switch to Dark Mode</button>
+        
+        <div class="clock-options">
+            <div>
+                <label for="hour-select">Hour Hand</label>
+                <select id="hour-select">
+                    <option value="hour">Clock Info</option>
+                    <option value="false" selected>Citizen Info</option>
+                </select>
+                <div class="false-options">
+                    <label><input type="checkbox" value="2" class="false-hour"> 2</label>
+                    <label><input type="checkbox" value="4" class="false-hour"> 4</label>
+                    <label><input type="checkbox" value="6" class="false-hour"> 6</label>
+                    <label><input type="checkbox" value="8" class="false-hour"> 8</label>
+                    <label><input type="checkbox" value="10" class="false-hour"> 10</label>
+                    <label><input type="checkbox" value="12" class="false-hour"> 12</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="minute-select">Minute Hand</label>
+                <select id="minute-select">
+                    <option value="minute">Clock Info</option>
+                    <option value="false" selected>Citizen Info</option>
+                </select>
+                <div class="false-options">
+                    <label><input type="checkbox" value="10" class="false-minute"> 10 or Pointing to 2 <b>NOT</b> Divisible by 20</label>
+                    <label><input type="checkbox" value="20" class="false-minute"> 20 or Pointing to 4 or Divisible by 20</label>
+                    <label><input type="checkbox" value="30" class="false-minute"> 30 or Pointing to 6 <b>NOT</b> Divisible by 20</label>
+                    <label><input type="checkbox" value="40" class="false-minute"> 40 or Pointing to 8 or Divisible by 20</label>
+                    <label><input type="checkbox" value="50" class="false-minute"> 50 or Pointing to 10 <b>NOT</b> Divisible by 20</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="second-select">Second Hand</label>
+                <select id="second-select">
+                    <option value="second">Clock Info</option>
+                    <option value="false" selected>Citizen Info</option>
+                </select>
+                <div class="false-options">
+                    <label><input type="checkbox" value="10" class="false-second"> 10 or Pointing to 2 <b>NOT</b> Divisible by 20</label>
+                    <label><input type="checkbox" value="20" class="false-second"> 20 or Pointing to 4 or Divisible by 20</label>
+                    <label><input type="checkbox" value="30" class="false-second"> 30 or Pointing to 6 <b>NOT</b> Divisible by 20</label>
+                    <label><input type="checkbox" value="40" class="false-second"> 40 or Pointing to 8 or Divisible by 20</label>
+                    <label><input type="checkbox" value="50" class="false-second"> 50 or Pointing to 10 or <b>NOT</b> Divisible by 20</label>
+                </div>
+            </div>
+
+            <button id="find-combinations-btn">Find Remaining Combinations</button>
+        </div>
+
+        <div id="combinations-list">
+            <h2>Possible Combinations</h2>
+            <ul id="combinations"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
